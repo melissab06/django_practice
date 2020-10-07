@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+    {% for i in 순위%}
+        {{i}}<br>
+    {% endfor %}
+
+    딕셔너리 key: 순위.a => {{순위.0.2.1}}<br> <!--타고들어가기-->
+
+<hr>
+
+    {% for i in 순위%}
+        {% for j in i%}
+            {{j}}
+        {% endfor %}
+        <br>
+    {% endfor %}
+
+    <br>
+    <hr>
+
+    <table border="1">
+    {% for i in 순위%}
+        상위 for ==> {{ forloop.counter }}<br>
+        하위 for ==> 
+        <tr> <!--엔터값처럼 생각-->
+            {% for j in i%}
+                {{ forloop.counter}}
+                <th>
+                    {{j}}
+                </th>
+            {% endfor %}
+        </tr><br>
+    {% endfor %}
+    </table>
+
+    </body>
+</html>

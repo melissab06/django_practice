@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>타이틀</title>
+        <script>
+            function checkForm(id, pass){
+                if(id.value == "1" && pass.value == "1"){
+                    window.open().location.href="http://127.0.0.1:8000/office/";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="color: skyblue">로그인 창</h1>
+        <form align = "center">
+        <input style=" width:500px; height:30px;" type="text" name="search">
+        </form>
+
+        <hr>
+
+        <form onclick="checkForm(id,pass)">  <!--checkForm 이라는 함수로 넘겨주기-->
+        <table align="right"></table>
+        <table>
+            <tr>
+                <td>
+                    <input type="text" name="id" size="13" maxlength="12" placeholder="아이디">
+                </td>
+                <th rowspan="2">
+                    <input type="submit" value="로그인" style="width: 60px;" height="55px;">
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" name="pass" size="13" maxlength="12" placeholder="비밀번호">
+                </td>
+            </tr>
+        </table>
+        </form>
+
+
+    </body>
+</html>

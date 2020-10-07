@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+    {% for i in url%}
+        {% for key, values in i.items %}
+            <li><a href="{{values}}">{{key}}</a></li>
+        {% endfor %}
+    {% endfor %}
+    
+    </body>
+</html>
